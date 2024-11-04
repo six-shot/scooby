@@ -1,0 +1,48 @@
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  border: 2px solid #ffffff1a;
+  transition: 0.2s;
+}
+
+.orbit-img {
+  @apply w-10 sm:w-24 h-10 sm:h-24 block rounded-full -z-10 absolute;
+}
+
+.item {
+  animation: spin 65s linear infinite;
+}
+
+.item-2 {
+  animation: spin2 95s linear infinite;
+}
+
+.item-3 {
+  animation: spin 125s linear infinite;
+  animation-delay: 1s;
+}
+
+.item-4 {
+  animation: spin2 150s linear infinite;
+  animation-delay: 1.5s;
+}
+
+.item-5 {
+  animation: spin 200s linear infinite;
+  animation-delay: 2s;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes spin2 {
+  100% {
+    transform: rotate(-1turn);
+  }
+}

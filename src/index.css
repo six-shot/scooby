@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 3%;
+    --foreground: 0 0% 100%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 224 35% 12%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --border: 0, 0%, 100%, 0.25;
+    --text-sec: 0 0% 80%;
+  }
+}
+
+@layer base {
+  * {
+    background-attachment: scroll !important;
+    line-height: 24px;
+    @apply border-border text-foreground;
+  }
+  body {
+    @apply bg-background;
+    color: #050b1f;
+    font-size: 16px;
+    font-weight: 400;
+    background-image: url(/bg.webp);
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: 1600px;
+  }
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin-inline: auto;
+  position: relative;
+}
+
+.gradient-bottom {
+  background-image: radial-gradient(
+    circle closest-corner at 50% 100%,
+    #dc01ff33,
+    #f150ff33 33%,
+    #fff0 80%
+  );
+}
+
+.gradient-btn {
+  z-index: 10;
+  background-image: radial-gradient(
+    circle farthest-side at 50% 180%,
+    #df27f7,
+    #f192e500
+  );
+  position: absolute;
+}
+
+.gradient-hover {
+  background-image: radial-gradient(
+    circle closest-side at 50% 50%,
+    hsl(var(--primary)),
+    #fff0
+  );
+}
+
+.pri-btn-hover {
+  @apply hover:shadow-[0_0_12px_#ffffff80] border hover:border-[#07070733] transition-all duration-500;
+}
+
+.sec-btn-hover {
+  @apply hover:shadow-[0_0_12px_#b45ab680] border border-[#ffffff1a] bg-[#ffffff0d] backdrop-blur;
+}
