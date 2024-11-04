@@ -1,4 +1,4 @@
-import { GradientButton } from "../ui/gradient-button";
+
 import { Icons } from "../ui/icons";
 
 export function FooterCTASection() {
